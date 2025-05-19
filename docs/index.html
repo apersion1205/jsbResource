@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- 添加图片预览插件的CSS -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-photo-preview/dist/style.min.css">
+  <style>
+    /* 确保整个页面可以自由滚动 */
+    body {
+      overflow: auto !important;
+    }
+    /* 主内容区域允许滚动 */
+    .content {
+      overflow: visible !important;
+      height: auto !important;
+    }
+    /* 侧边栏允许滚动 */
+    .sidebar {
+      overflow-y: auto !important;
+    }
+    /* 移除可能限制滚动的容器样式 */
+    .app-nav, .cover, .cover-main {
+      overflow: visible !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: '',
+      repo: '',
+      routerMode: 'history', // 去除 url 中的 # 号
+      // 开启侧边栏定制,加载_sidebar.md
+      loadSidebar: true,
+      subMaxLevel: 3,
+      loadNavbar: true,
+      onlyCover: true,
+      coverpage: true,
+      // 确保内容高度自适应
+      autoHeader: true,
+      // 禁用默认的滚动行为
+      noScroll: false,
+      downloadButton: {
+        // 自定义下载按钮文本（默认是 Download）
+        text: '点击下载'
+      },
+      count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese'
+      }
+    }
+  </script>
+  <!-- 表情包 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- 文件下载 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-download-button/dist/docsify-download-button.min.js"></script>
+  <!-- 代码复制 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- 图片预览插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 自动为文件链接添加下载功能 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-download-button/dist/docsify-download-button.min.js"></script>
+</body>
+</html>
